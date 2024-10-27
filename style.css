@@ -1,0 +1,338 @@
+/* Global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F2F2;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 50px;
+    margin-top: 10px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between brand and nav */
+    background-color: #6600cc;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Brand styling */
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.brand-name {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: flex; /* Keep this as flex to align items in a row */
+}
+
+nav .menu {
+    list-style-type: none;
+    display: flex; /* Align menu items in a row */
+    gap: 20px; /* Space between menu items */
+    margin: 0; /* Reset margin */
+}
+
+nav .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav .menu li a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Header Menu for Tablet and Smaller */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .brand {
+        margin-bottom: 10px; /* Space between brand and menu on smaller screens */
+    }
+
+    nav .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center menu items */
+        gap: 10px; /* Adjust spacing for mobile view */
+    }
+}
+
+/* Other Styles Remain Unchanged */
+.head-img {
+    display: flex;
+    justify-content: center;
+}
+
+#headshot {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    #headshot {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.btn-contact {
+    margin: 15px 0; /* Adjust margin for spacing */
+    padding: 12px 24px; /* Increase padding for better readability */
+    background-color: white;
+    border: 2px solid #6600cc;
+    border-radius: 22px;
+    font-weight: bold;
+    text-decoration: none; /* Ensure the link looks like a button */
+    display: inline-block; /* Allow margin to be applied */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+}
+
+.btn-contact:hover {
+    background-color: #6600cc;
+    color: white;
+    padding: 12px 24px; /* Maintain padding on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight movement from bottom */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#about {
+    font-size: 18px;
+    margin-top: -40px;
+    text-align: center;
+    padding: 40px; /* Increase padding for better spacing */
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px #C9C9C9;
+    border-radius: 7px;
+    animation: fadeIn 1s ease; /* Add animation */
+}
+
+/* Skills Section */
+.skills {
+    height: auto;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px #C9C9C9;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Work Section */
+.jobs-container {
+    padding-top: 10px;
+    background-color: white;
+    box-shadow: 5px 10px 5px 5px #C9C9C9;
+}
+
+.jobs-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    margin: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+}
+
+.column:hover {
+    width: 100%;
+    max-width: 320px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.inlined {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the skills in the container */
+}
+
+.inlined a + a {
+    padding-left: 10px;
+}
+
+#social {
+    justify-content: center;
+    padding: 10px;
+}
+
+.lang {
+    margin: 5px;
+    font-size: 18px;
+}
+
+.block {
+    flex: 1 0 21%; /* Each block takes up approximately 21% of the row */
+    margin: 10px; /* Space between skill blocks */
+    min-width: 150px; /* Ensures a minimum width for responsiveness */
+}
+
+img {
+    margin: 2px;
+}
+
+.content {
+    padding: 10px;
+		text-align: center;
+}
+
+h3 {
+    font-size: 20px; /* Font size for project titles */
+    margin-bottom: 10px; /* Space between title and image */
+}
+
+p {
+    text-align: center;
+}
+
+.btn-view-project {
+    display: inline-block; /* Make button inline with text */
+    margin-top: 10px; /* Space between description and button */
+    padding: 8px 16px; /* Padding for the button */
+    background-color: #6600cc; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.btn-view-project:hover {
+    background-color: #ffcc00; /* Change color on hover */
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+    }
+
+    nav .menu li {
+        margin: 0 10px;
+    }
+
+    .btn-contact {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .skills .block {
+        margin: 10px;
+    }
+}
+
+/* chnages till here */
+/* Skill Progress Bars */
+.progress {
+    background-color: #e0e0e0; /* Light grey background */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Ensures the inner div doesn't overflow */
+    margin: 10px 0; /* Space between skills */
+    height: 25px; /* Height of the progress bar */
+    width: 300px; /* Fixed width for the progress bar */
+    max-width: 100%; /* Ensures it doesn't exceed the container width */
+}
+
+.progress-bar {
+    height: 100%; /* Full height of the progress container */
+    line-height: 25px; /* Center the text vertically */
+    color: white; /* White text for visibility */
+    text-align: center; /* Center the percentage text */
+    border-radius: 20px; /* Rounded corners for the progress */
+    transition: width 0.5s ease; /* Smooth transition for width change */
+}
+
+.html {
+    background-color: #e44d26; /* Color for HTML */
+}
+
+.css {
+    background-color: #2965f1; /* Color for CSS */
+}
+
+.js {
+    background-color: #f0db4f; /* Color for JavaScript */
+    color: black; /* Black text for better contrast */
+}
+
+.python {
+    background-color: #3572A5; /* Color for Python */
+}
+
+.java {
+    background-color: #007396; /* Color for Java */
+}
